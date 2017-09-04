@@ -1,0 +1,14 @@
+<!doctype html>
+<title>Download Youtube Videos</title>
+<body>
+    <form action="/youtube/submit" method="POST">
+        <span>youtube urls: </span><textarea name="urls" rows="10" cols="50"></textarea><br />
+        <span>code: </span><input type="text" name="code"><br />
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="/youtube/query" method="POST">
+        <span>code: </span><input type="text" name="code"><br />
+        <button type="submit">Query</button>
+    </form>
+</body>

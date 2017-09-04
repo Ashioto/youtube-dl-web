@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Download Results</title>
+
+<ul>
+    {% for info in tar_files_info %}
+        <a href='{{"download/"~info.name}}'>{{ info.name }}
+        </a>
+        {{ info.time }}
+        {{ info.size~"M" }}
+        <a href='{{"delete/"~info.name}}'>delete
+        </a>
+            {% for file in info.files %}
+                <li>{{ file }}</li>
+            {% endfor %}
+        <br />
+    {% endfor %}
+</ul>
